@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {{ 'espaceAffretement'|trans }} : {{ 'login' |trans }}{% endblock %}</title>
+
+    {% block stylesheets %}{{ encore_entry_link_tags('app') }}
+    {% endblock %}
+    {% block javascripts %}{{ encore_entry_script_tags('app') }}
+    {% endblock %}
+    {% block custom %}
+    {% endblock %}
+</head>
+<body>
+<div class="modal modal-overlay"></div>
+<nav>
+    <a id="logo-title" href="{{ path('login') }}"> <img src="{{ asset('images/logo-capelle.png') }}"
+                                                        alt="logo-capelle"
+                                                        id="logo-capelle"> {{ 'espaceAffretement'|trans }} </a>
+
+    <div class="onglets">
+        <!--a href="https://www.flaticon.com/fr/icones-gratuites/france" title="france icônes">France icônes créées par Freepik - Flaticon</a -->
+
+        {% if token is defined %}
+
+            <a class="onglet-arrondi"
+               href="{{ path(app.request.attributes.get('_route'), {'token' : token, '_locale': 'fr'}) }}">
+                <img src="https://cdn-icons-png.flaticon.com/128/197/197560.png">
+
+            </a>
+            <a class="onglet-arrondi"
+               href="{{ path(app.request.attributes.get('_route'), {'token' : token, '_locale': 'en'}) }}"><img
+                        src="https://cdn-icons-png.flaticon.com/128/197/197485.png"></a>
+            <a class="onglet-arrondi"
+               href="{{ path(app.request.attributes.get('_route'), {'token' : token, '_locale': 'es'}) }}"><img
+                        src="https://cdn-icons-png.flaticon.com/128/323/323365.png"></a>
+
+        {% else %}
+            <a class="onglet-arrondi" href="{{ path(app.request.attributes.get('_route'), {'_locale': 'fr'}) }}">
+                <img src="https://cdn-icons-png.flaticon.com/128/197/197560.png">
+
+            </a>
+            <a class="onglet-arrondi" href="{{ path(app.request.attributes.get('_route'), {'_locale': 'en'}) }}"><img
+                        src="https://cdn-icons-png.flaticon.com/128/197/197485.png"></a>
+            <a class="onglet-arrondi" href="{{ path(app.request.attributes.get('_route'), {'_locale': 'es'}) }}"><img
+                        src="https://cdn-icons-png.flaticon.com/128/323/323365.png"></a>
+
+        {% endif %}
+
+        <a href="{{ path('depot_document') }}">{{ 'depotDocument'|trans }}</a>
+        <a href="{{ path('mes_documents') }}">{{ 'myDocuments'|trans }}</a>
+        <a href="{{ path('profile') }}"><i class="bi bi-person-gear"></i></a>
+
+        {% if app.user %}
+            <a href="{{ path('logout') }}"><i class="bi bi-box-arrow-left"></i>
+            </a>
+        {% else %}
+            <a href="{{ path('login') }}"><i class="bi bi-box-arrow-in-right"></i>
+            </a>
+        {% endif %}
+    </div>
+
+
+</nav>
+{% block body %}{% endblock %}
+<footer> © 2023 Groupe Capelle - Tous droits réservés - Powered by <img id="logo-esi"
+                                                                        src="{{ asset('images/logo-esi.png') }}"
+                                                                        alt="logo-capelle"
+                                                                        id="logo-capelle">
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}  {{ 'myDocuments'|trans }} {% endblock %}
+
+{% block body %}
+    <div id="document-selection">
+        <h3 id="mes-documents"> {{ 'myDocuments'|trans }} </h3>
+    </div>
+    <div id="btn-voir">
+        {% if documentsValides is not empty %}
+            <button id="btn-all-documents" class="btn btn-primary">{{ 'seeAllDocuments'|trans }}
+            </button>
+            <button id="btn-documents-valides" class="btn btn-primary">{{ 'seeValidDocuments'|trans }}
+            </button>
+        {% endif %}
+
+    </div>
+
+    <div class="documents">
+        {% if documents is not empty %}
+            <table class="table">
+                <thead class="thead-light">
+                <tr>
+                    <th>{{ 'type'|trans }}</th>
+                    <th>{{ 'endValidity'|trans }}</th>
+                    <th>{{ 'state'|trans }}</th>
+                    <th>{{ 'message'|trans }}</th>
+                    <th>{{ 'action'|trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% set nbDocuments = 0 %}
+                {% for type in types %}
+                    {% if documents[nbDocuments] %}
+                        <tr>
+                        <td>{{ type.label|trans }}</td>
+                        <td>{{ documents[nbDocuments].validityEnd.format('d/m/Y') }}</td>
+                        <td>{{ documents[nbDocuments].analysisState|trans }}</td>
+                        <td class="cellule-deroulante">
+                            <div>{{ documents[nbDocuments].message }}</div>
+                        </td>
+                        {% if documents[nbDocuments].analysisState != 'valide' %}
+                            <td>
+                                <a href="{{ path('depot_document', {'typeDocument': type.id}) }}" class="btn-document">
+                                    <i class="bi bi-file-earmark-plus"></i>
+                                </a>
+                                <a href="{{ path('visualiser_mon_document', {'id': documents[nbDocuments].id}) }}"
+                                   target="_blank"
+                                   class="
+                                   btn-document">
+                                    <i class="bi bi-eye-fill"></i>
+                                </a>
+                                <a href="{{ path('supprimer_document', {'id': documents[nbDocuments].id}) }}" class="
+                                   btn-document">
+                                    <i class="bi bi-trash3-fill"></i>
+                                </a>
+                            </td>
+                            </tr>
+                        {% elseif documents[nbDocuments].validityEnd <= perimeBientot %}
+                            <td>
+                                <a href="{{ path('depot_document', {'typeDocument': type.id}) }}" class="btn-document">
+                                    <i class="bi bi-file-earmark-plus"></i>
+                                </a>
+                                <a href="{{ path('visualiser_mon_document', {'id': documents[nbDocuments].id}) }}"
+                                   target="_blank"
+                                   class="
+                                   btn-document">
+                                    <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </td>
+                        {% else %}
+                            <td>
+                                <a href="{{ path('visualiser_mon_document', {'id': documents[nbDocuments].id}) }}"
+                                   target="_blank"
+                                   class="
+                                   btn-document">
+                                    <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </td>
+                        {% endif %}
+
+
+
+                    {% else %}
+                        <tr>
+                            <td>{{ type.label|trans }}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><a href="{{ path('depot_document', {'typeDocument': type.id}) }}">
+                                    <i class="bi bi-file-earmark-plus"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endif %}
+                    {% set nbDocuments = nbDocuments + 1 %}
+                {% endfor %}
+
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+    {% if documentsValides is not empty %}
+        <div id="documents-valides" class="documents">
+            <table class="table">
+                <thead class="thead-light">
+                <tr>
+                    <th>{{ 'type'|trans }}</th>
+                    <th>{{ 'endValidity'|trans }}</th>
+                    <th>{{ 'action'|trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for documentValide in documentsValides %}
+                    <tr>
+                        <td>{{ documentValide.type.label|trans }}</td>
+                        <td>{{ documentValide.validityEnd.format('d/m/Y') }}</td>
+                        <td>{% if documentValide.validityEnd <= perimeBientot %}
+                                <a href="{{ path('depot_document', {'typeDocument': documentValide.type.id}) }}">
+                                    <i class="bi bi-file-earmark-plus"></i>
+                                </a>
+                            {% endif %}
+                            <a href="{{ path('visualiser_mon_document', {'id': documentValide.id}) }}"
+                               target="_blank"
+                               class="
+                                   btn-document">
+                                <i class="bi bi-eye-fill"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    {% endif %}
+
+
+{% endblock %}
+

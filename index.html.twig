@@ -1,0 +1,39 @@
+{% extends '/base_login.html.twig' %}
+
+{% block body %}
+    <form action="{{ path('login', {'_locale': langue }) }}" method="post" class="formulaire-connexion">
+        <div id="title-login">
+            <h2>{{ 'login'|trans }}</h2></div>
+        <div class="mb-3">
+            <label class="label-bottom form-label required" for="compte_email">{{ 'email'|trans }}
+            </label>
+            <input type="email" id="compte_email" name="_username" required="required"
+                   placeholder="{{ 'email'|trans }}"
+                   class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label class="label-bottom form-label required" for="compte_password">{{ 'password'|trans }}</label>
+            <input type="password" id="compte_password" name="_password" required="required"
+                   placeholder="{{ 'password'|trans }}"
+                   class="form-control"/>
+        </div>
+
+        <a href="{{ path("forgot_password") }}"
+           id="forgot-password">{{ 'forgotPassword'|trans }}</a>
+
+        <input type="submit" class="btn btn-success btn-login" value="{{ 'login'|trans }}">
+
+        {% if message is defined %}
+            <p id="message-has-reset">
+                {{ message|trans }}
+            </p>
+        {% elseif messageErreurLogin is defined %}
+            <p id="message-has-failed">
+                {{ 'messageErreurLogin'|trans }}
+            </p>
+        {% endif %}
+
+    </form>
+
+
+{% endblock %}

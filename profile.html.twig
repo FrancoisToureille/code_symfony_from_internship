@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ 'espaceAffretement'|trans }} : {{ 'profile'|trans }} {% endblock %}
+
+{% block custom %}
+
+{% endblock %}
+
+{% block body %}
+
+    <div id="affichage-profil">
+        <h3 id="modifier">{{ 'my_profile'|trans }}</h3>
+
+        <label>
+            {{ 'chartered' |trans }} : {{ compte.affrete.companyName }}
+        </label>
+
+        <label>
+            {{ 'email' |trans }} : {{ compte.email }}
+        </label>
+
+        <a href="{{ path('profile_change_password') }}" type="button" class="btn btn-primary btn-modifier-password"
+           id="js-affiche-profil">
+            {{ 'changePassword'|trans }}
+        </a>
+    </div>
+{% endblock %}

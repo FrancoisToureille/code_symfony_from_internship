@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}  {{ 'insertDocument'|trans }} {% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <div id="div-question-mark">
+        <h3 id="title-insert">{{ 'insertDocument'|trans }}</h3>
+    </div>
+    <!-- traduction faite automatiquement par le navigateur pour l'input "Choisir un fichier|Aucun fichier choisi" -->
+    <div id="div-type"> {{ form_row(form.type, {'label': 'form.type'|trans}) }}
+        <p class="information-depot"> {{ 'documentMandatory'|trans }}</p></div>
+
+    {{ form_row(form.validityEnd, {'label': 'form.validityEnd'|trans}) }}
+    {{ form_row(form.brochure, {'label': ' '}) }}
+    <p class="information-depot" id="information-format"> {{ 'documentFormat'|trans }}</p>
+    <ul class="list-unstyled">
+        <li><p>{{ 'justiceFirstSentence'|trans }}</p></li>
+        <li><p>{{ 'justiceSecondSentence'|trans }}</p></li>
+        <li><p>{{ 'justiceThirdSentence'|trans }}</p></li>
+
+    </ul>
+    {{ form_row(form.sauvegarder, {'label': 'save'|trans}) }}
+
+    {{ form_end(form) }}
+
+
+{% endblock %}
