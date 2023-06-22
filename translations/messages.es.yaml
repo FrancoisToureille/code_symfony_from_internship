@@ -1,0 +1,100 @@
+#nav.home: Accueil
+espaceAffretement: Espacio de fletamento
+depotDocument: Depositar un documento
+myDocuments: Mis documentos
+profile: Perfil
+logout: Cerrar sesión
+login: Iniciar sesión
+
+
+#nav.login: Iniciar sesión
+password: Contraseña
+forgotPassword: ¿Olvidaste tu contraseña?
+messageErreurLogin: "El correo electrónico o la contraseña no son correctos"
+
+#nav.depot_documents: Depot d'un document
+insertDocument: Insertar un documento
+documentMandatory: "* Este documento es obligatorio"
+justiceFirstSentence: "Se recuerda a cualquier fletador o subcontratista que constituye una falsificación cualquier alteración fraudulenta de la verdad, de una naturaleza que cause perjuicio y realizada por
+ cualquier medio, por escrito o cualquier otro medio de expresión del pensamiento que tenga por objeto o que pueda tener por efecto establecer
+  la prueba de un derecho o un hecho que tenga consecuencias legales."
+justiceSecondSentence: "La falsificación y el uso de la falsificación están castigados con tres años de prisión y 45.000 euros de multa."
+justiceThirdSentence: "En consecuencia, el depositante certifica y garantiza la autenticidad de los documentos proporcionados."
+form.type: "Tipo"
+form.validityEnd: "Fecha de finalización de validez"
+form.brochure: "Elija un archivo"
+form.brochure.constraints.mimeTypesMessage: "Se espera un documento PDF"
+form.brochure.constraints.maxSizeMessage: "Se espera un documento PDF de 10 MB como máximo"
+save: Guardar
+infoDepot: Hay 3 tipos de documentos obligatorios, el KBIS, el certificado de vigilancia y el certificado de regularidad fiscal.
+documentFormat: "formato: PDF; Tamaño máximo del archivo: 10 MB"
+
+#nav.mes_documents: Mes documents
+type: Tipo
+endValidity: Validez final
+state: Estado
+message: Mensaje
+action: Acción
+KBIS: KBIS
+attestationVigilance: Certificado de vigilancia
+attestationRegulariteFiscale: Certificado de regularidad fiscal
+assuranceMarchandise: Seguro de mercancías
+licenceCommunautaire: Licencia comunitaria
+assuranceResponsabiliteCivile: Seguro de responsabilidad civil
+attente: Esperando
+valide: Validado
+invalide: Rechazado
+seeValidDocuments: Ver documentos validados
+seeAllDocuments: Ver currentes documentos
+
+#nav.profile: Profile
+my_profile: Gestionar mi perfil
+chartered: Carta
+siret: Siret
+email: Correo electrónico
+changePassword: Cambiar la contraseña
+form.oldPassword: Contraseña actual
+form.newPassword: Nueva contraseña
+form.confirmPassword: Confirmación de contraseña
+updateProfile: Actualizar
+cancel: Cancelar
+badPassword: La contraseña actual no es correcta
+invalidPassword: La contraseña debe contener al menos 8 caracteres, incluyendo 1 mayúscula, 1 minúscula, 1 número y 1 carácter especial
+differentsPassword: Las contraseñas no son idénticas
+
+#nav.reset_password: Reset password
+captcha: Introduzca el código de abajo
+helpResetPassword: Si no recuerda su contraseña, puede restablecer la haciendo clic en el siguiente enlace.
+noEmail: Email no encontrado
+sendedEmail: Se ha enviado un correo electrónico a la dirección indicada
+resetPassword: Restablecer la contraseña
+mailBeginning: "Hola,"
+mailFirstSentence: "Ha solicitado restablecer su contraseña en Espacio de fletamento."
+mailSecondSentence: "Usted puede hacer este cambio en el plazo de una hora, más allá, será necesario reiterar su petición."
+mailThirdSentence: "Si no ha solicitado este cambio, puede ignorar este correo electrónico."
+mailFourthSentence: "Para restablecer su contraseña, haga clic "
+
+
+yourPasswordHasBeenChanged: Tu contraseña ha sido cambiada
+retry: Se produjo un problema, inténtalo de nuevo
+
+#api
+subjectBeginning: "[Espacio de fletamento CAPELLE] - "
+expirationOf: "Expiración de su documento "
+inCharteringSpace: " en Espacio de fletamento"
+creationAccount: "Creación de su cuenta "
+resetYourPassword: "Restablecer su contraseña "
+document: "Su documento "
+refused: " ha sido rechazado"
+
+mailRefusedFirstSentence: "El documento que ha depositado ha sido rechazado por el siguiente motivo: "
+mailRefusedSecondSentence: "Puede volver a depositar un documento en el espacio de fletamento haciendo clic "
+mailCreationFirstSentence: "Bienvenido a Espacio de fletamento, su cuenta ha sido creada con éxito."
+mailCreationSecondSentence: "Para acceder a su cuenta, modifique su contraseña haciendo clic "
+mailExpirationFirstSentence: "Su documento expirará pronto, por favor vuelva a presentarlo."
+mailExpirationSecondSentence: "Puede volver a depositar un documento en el espacio de fletamento haciendo clic "
+clickingHere: "aquí."
+
+
+
+

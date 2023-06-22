@@ -1,0 +1,95 @@
+#nav.home: Accueil
+espaceAffretement: Espace Affrètement
+depotDocument: Déposer un document
+myDocuments: Mes documents
+profile: Profil
+logout: Déconnexion
+login: Connexion
+
+#nav.login: Login
+password: Mot de passe
+forgotPassword: "Mot de passe oublié ?"
+messageErreurLogin: "L'email ou le mot de passe est incorrect"
+
+#nav.depot_document: Depot d'un document
+insertDocument: Ajout d'un document
+documentMandatory: "* Ce document est obligatoire"
+justiceFirstSentence: "Il est rappelé à tout affrété ou sous-traitant que constitue un faux toute altération frauduleuse de la vérité, de nature à causer un préjudice et accomplie par
+ quelque moyen que ce soit, dans un écrit ou tout autre support d'expression de la pensée qui a pour objet ou qui peut avoir pour effet d'établir
+  la preuve d'un droit ou d'un fait ayant des conséquences juridiques."
+justiceSecondSentence: "Le faux et l'usage de faux sont punis de trois ans d'emprisonnement et de 45 000 euros d'amende."
+justiceThirdSentence: "En conséquence, le déposant certifie et garantit l’authenticité des documents fournis."
+
+form.type: "Type"
+form.validityEnd: "Date de fin de validité"
+form.brochure: "Choisir un fichier"
+form.brochure.constraints.mimeTypesMessage: "Un document PDF est attendu"
+form.brochure.constraints.maxSizeMessage: "Un document PDF de 10 Mo maximum est attendu"
+save: Enregistrer
+infoDepot: Il y a 3 types de document obligatoires, le KBIS, l'attestation de vigilance et l'attestation de régularité fiscale.
+documentFormat: "format : PDF; Taille maximale du fichier : 10 Mo"
+
+
+#nav.mes_documents: Mes documents
+type: Type
+endValidity: Fin de validité
+state: Etat
+message: Message
+action: Action
+KBIS: KBIS
+attestationVigilance: Attestation de vigilance
+attestationRegulariteFiscale: Attestation de régularité fiscale
+assuranceMarchandise: Assurance marchandise
+licenceCommunautaire: Licence communautaire
+assuranceResponsabiliteCivile: Assurance responsabilité civile
+attente: En attente
+valide: Validé
+invalide: Invalide
+seeValidDocuments: Voir les documents valides
+seeAllDocuments: Voir les documents actuels
+
+#nav.profile: Profil
+my_profile: Gérer mon profil
+chartered: Affrété
+siret: Siret
+email: Email
+changePassword: Modifier le mot de passe
+form.oldPassword: Mot de passe actuel
+form.newPassword: Nouveau mot de passe
+form.confirmPassword: Confirmation du mot de passe
+updateProfile: Modifier
+cancel: Annuler
+badPassword: Le mot de passe actuel n'est pas correct
+invalidPassword: Le mot de passe doit contenir au moins 8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial
+differentsPassword: Les mots de passe ne sont pas identiques
+
+#nav.reset_password: Reset password
+helpResetPassword: Entrez votre adresse e-mail ci-dessous et nous vous enverrons un lien pour réinitialiser votre mot de passe.
+captcha: Recopiez le texte ci-dessous
+sendedEmail: Un email a été envoyé à l'adresse indiquée
+noEmail: Aucun compte n'est associé à cette adresse e-mail
+resetPassword: Réinitialiser le mot de passe
+mailBeginning: Bonjour,
+mailFirstSentence: Vous avez demandé à réinitialiser votre mot de passe sur Espace Affrètement.
+mailSecondSentence: "Vous pouvez effectuer ce changement dans un délai d'une heure, au delà, il faudra réitérer votre demande."
+mailThirdSentence: "Si vous n'êtes pas à l'origine de cette demande, vous pouvez ignorer cet e-mail."
+mailFourthSentence: "Pour réinitialiser votre mot de passe, cliquez "
+yourPasswordHasBeenChanged: Votre mot de passe a été modifié
+retry: Une erreur est survenue, veuillez réessayer
+
+#api
+subjectBeginning: "[Espace Affrètement CAPELLE]- "
+expirationOf: "Expiration de votre document "
+inCharteringSpace: " dans votre espace affrètement"
+creationAccount: "Création de votre compte"
+resetYourPassword: "Réinitialisation de votre mot de passe"
+document: "Votre document "
+refused: " a été refusé"
+
+mailRefusedFirstSentence: "Votre document a été refusé pour la raison suivante : "
+mailRefusedSecondSentence: "Vous pouvez le modifier et le déposer à nouveau dans votre espace affrètement en cliquant "
+mailCreationFirstSentence: "Bienvenue dans Espace Affrètement, votre compte a été créé avec succès."
+mailCreationSecondSentence: "Vous pouvez dès à présent vous connecter en choisissant d'abord votre mot de passe en cliquant "
+mailExpirationFirstSentence: "Votre document arrive bientôt à expiration."
+mailExpirationSecondSentence: "Vous pouvez le modifier et le déposer à nouveau dans votre espace affrètement en cliquant "
+clickingHere: "ici."

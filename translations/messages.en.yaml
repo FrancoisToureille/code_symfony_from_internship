@@ -1,0 +1,94 @@
+#nav.home: Accueil
+espaceAffretement: Chartering space
+depotDocument: Deposit a document
+myDocuments: My documents
+profile: Profile
+logout: Logout
+login: Login
+
+#nav.login: Login
+password: Password
+forgotPassword: "Forgot password ?"
+messageErreurLogin: "The email or password is incorrect"
+
+#nav.depot_documents: Depot d'un document
+insertDocument: Insert a document
+documentMandatory: "* This document is mandatory"
+justiceFirstSentence: "It is recalled to any charterer or subcontractor that constitutes a forgery any fraudulent alteration of the truth, of a nature to cause prejudice and carried out by
+ any means whatsoever, in writing or any other medium of expression of thought which has for object or which can have for effect to establish
+  the proof of a right or a fact having legal consequences."
+justiceSecondSentence: "Forgery and use of forgery are punishable by three years' imprisonment and a fine of 45,000 euros."
+justiceThirdSentence: "Consequently, the depositor certifies and guarantees the authenticity of the documents provided."
+form.validityEnd: "Validity end date"
+form.brochure: "Choose a file"
+form.brochure.constraints.mimeTypesMessage: "A PDF document is expected"
+form.brochure.constraints.maxSizeMessage: "A PDF document of 10 MB maximum is expected"
+save: Save
+infoDepot: There are 3 types of mandatory documents, the KBIS, the certificate of vigilance and the certificate of tax regularity.
+documentFormat: "format : PDF; Maximum file size : 10 MB"
+
+#nav.mes_documents: Mes documents
+type: Type
+endValidity: Validity end
+state: State
+message: Message
+action: Action
+KBIS: KBIS
+attestationVigilance: Certificate of vigilance
+attestationRegulariteFiscale: Certificate of tax regularity
+assuranceMarchandise: Merchandise insurance
+licenceCommunautaire: Community license
+assuranceResponsabiliteCivile: Civil liability insurance
+attente: Waiting
+valide: Validated
+invalide: Refused
+seeValidDocuments: See validated documents
+seeAllDocuments: See current documents
+
+
+#nav.profile: Profile
+my_profile: Manage my profile
+chartered: Chartered
+email: Email
+changePassword: Change password
+form.oldPassword: Current password
+form.newPassword: New password
+form.confirmPassword: Password confirmation
+updateProfile: Update
+cancel: Cancel
+badPassword: The current password is not correct
+invalidPassword: The password must contain at least 8 characters, including 1 uppercase, 1 lowercase, 1 number and 1 special character
+differentsPassword: Passwords are not identical
+
+#nav.reset_password: Reset password
+captcha: Enter the code below
+helpResetPassword: Enter your email address below and we will send you a link to reset your password.
+no_email: Email not found
+sendedEmail: An email has been sent to the address indicated
+resetPassword: Reset password
+mailBeginning: "Hello,"
+mailFirstSentence: "You have requested to reset your password on Chartering Space."
+mailSecondSentence: "You can make this change within one hour, after, you will have to repeat your request."
+mailThirdSentence: "If you have not requested this change, please ignore this email."
+mailFourthSentence: "To reset your password, click "
+
+yourPasswordHasBeenChanged: Your password has been changed
+retry: A problem occurred, please try again
+
+#api
+subjectBeginning: "[Chartering Space CAPELLE] - "
+expirationOf: "Expiration of your document "
+inCharteringSpace: " in Chartering Space"
+creationAccount: "Creation of your account"
+resetYourPassword: "Reset your password "
+document: "Your document "
+refused: " has been refused"
+
+
+mailRefusedFirstSentence: "The document you have just deposited has been refused."
+mailRefusedSecondSentence: "You can deposit a new one by clicking "
+mailCreationFirstSentence: "Welcome to Chartering Space, you can now deposit your documents."
+mailCreationSecondSentence: "You can deposit your documents after you are going to reset your password by clicking "
+mailExpirationFirstSentence: "The document you have just deposited is going to expire."
+mailExpirationSecondSentence: "You can deposit a new one by clicking "
+clickingHere: "here."
