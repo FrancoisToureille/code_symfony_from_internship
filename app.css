@@ -1,0 +1,195 @@
+@import "depot_document.css";
+@import "profil.css";
+@import "mes_documents.css";
+@import "change_password.css";
+@import 'bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+
+html {
+    height: 100%;
+
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    background-color: #9e161a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0.6em;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+footer {
+    background-color: #e9ecef;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+div > a {
+    color: white;
+}
+
+nav > a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+#forgot-password {
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-bottom: 3em;
+}
+
+.formulaire-connexion {
+    margin-top: 6.5em;
+    width: 33%;
+    height: 55%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    padding: 10px;
+}
+
+#espace-affretement {
+    padding: 0.5em;
+}
+
+#espace-affretement > a {
+    text-decoration: none;
+    color: white;
+}
+
+#espace-affretement:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.onglet-arrondi:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding-bottom: 0.2em;
+}
+
+.onglets > a > i {
+    color: white;
+}
+
+.onglets > a > i:hover {
+    color: black;
+}
+
+img {
+    width: 1.5em;
+}
+
+h3 {
+    padding: 1em;
+}
+
+.onglets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    /* padding: 20px;*/
+}
+
+.onglets-login {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+    /* padding: 20px;*/
+}
+
+.label-bottom label {
+    display: block;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-login {
+    margin-bottom: 2em;
+}
+
+#title-login {
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+#logo-capelle {
+    width: 7em;
+    padding-right: 0.5em;
+}
+
+#logo-title {
+    font-size: 2em;
+}
+
+#logo-title:hover {
+    color: white;
+}
+
+#logo-esi {
+    padding-left: 0.5em;
+    width: 5em;
+}
+
+#compte_email, #compte_password {
+    width: 25em;
+}
+
+
+@media screen and (max-width: 1300px) {
+    #logo-capelle {
+        width: 6em;
+    }
+
+    #logo-title {
+        font-size: 1.3em;
+    }
+
+    #compte_email, #compte_password {
+        width: 15em;
+    }
+}
